@@ -1,0 +1,29 @@
+{
+  "timezone": "America/Cayman",
+
+  "sats": ["NOAA 19", "NOAA 18", "METEOR-M2 2", "METEOR-M2 3"],
+
+  "tle_url": "https://celestrak.org/NORAD/elements/gp.php?GROUP=weather&FORMAT=tle",
+
+  "ground_station": {
+    "lat": 19.3651,
+    "lon": -81.3945,
+    "alt": 4
+  },
+
+  "target": {
+    "az": 270,
+    "el": 45,
+    "radius_deg": 30
+  },
+
+  "schedule": {
+    "Monday": [["17:00", "22:00"]],
+    "Tuesday": [["17:00", "22:00"]],
+    "Wednesday": [["17:00", "22:00"]],
+    "Thursday": [["17:00", "22:00"]],
+    "Friday": [["17:00", "22:00"]],
+    "Saturday": [["10:00", "18:00"]],
+    "Sunday": [["10:00", "18:00"]]
+  }
+}
