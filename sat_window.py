@@ -237,19 +237,20 @@ if __name__ == "__main__":
 		all_passes = get_passes(satellite)
 		total_passes += len(all_passes)
 		
-		# filter based on target area of sky
-		target_passes = []
-		for sat_pass in all_passes:
-			if pass_within_target(sat_pass, satellite):
-				target_passes.append(sat_pass)
+		if len(all_passes) > 0:
+			# filter based on target area of sky
+			target_passes = []
+			for sat_pass in all_passes:
+				if pass_within_target(sat_pass, satellite):
+					target_passes.append(sat_pass)
 
-		# filter based on schedule
-		schedule_passes = []
-		for sat_pass in target_passes:
-			if pass_within_schedule(sat_pass['culminate']['time']):
-				schedule_passes.append(sat_pass)
+			# filter based on schedule
+			schedule_passes = []
+			for sat_pass in target_passes:
+				if pass_within_schedule(sat_pass['culminate']['time']):
+					schedule_passes.append(sat_pass)
 
-		tle['passes'] = schedule_passes
+			tle['passes'] = schedule_passes
 
 	filtered_passes = []
 
